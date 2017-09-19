@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.1 (43504) - http://www.bohemiancoding.com/sketch -->
+    <title>verMas Copy 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="04-Coleccion" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Coleccion-funel-768" transform="translate(-574.000000, -1452.000000)">
+            <g id="verMas" transform="translate(574.000000, 1452.000000)">
+                <circle id="Oval" fill-opacity="0.35" fill="#4C4C4D" fill-rule="evenodd" cx="15" cy="15" r="15"></circle>
+                <path d="M15,30 C6.71572875,30 0,23.2842712 0,15 C0,6.71572875 6.71572875,0 15,0 C23.2842712,0 30,6.71572875 30,15 C30,23.2842712 23.2842712,30 15,30 Z M15,29.1428571 C22.8108843,29.1428571 29.1428571,22.8108843 29.1428571,15 C29.1428571,7.18911568 22.8108843,0.857142857 15,0.857142857 C7.18911568,0.857142857 0.857142857,7.18911568 0.857142857,15 C0.857142857,22.8108843 7.18911568,29.1428571 15,29.1428571 Z" id="Combined-Shape" fill="#ED3243" fill-rule="evenodd"></path>
+                <rect id="Rectangle-2" stroke="#ED3243" stroke-width="1" x="15.0714286" y="7.35714286" width="1" height="16.1428571"></rect>
+                <rect id="Rectangle-2-Copy" stroke="#ED3243" stroke-width="1" x="7.35714286" y="15.0714286" width="16.1428571" height="1"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

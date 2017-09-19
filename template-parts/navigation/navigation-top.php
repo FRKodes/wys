@@ -20,7 +20,7 @@
 	</button>
 
 	<?php wp_nav_menu( array(
-		'theme_location' 	=> 'header',
+		'theme_location' 	=> 'main_menu',
 		'menu_id'        	=> 'navbarCollapse',
 		'menu_class' 		=> 'collapse navbar-collapse'
 	) ); ?>
