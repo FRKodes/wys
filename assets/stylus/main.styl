@@ -11,6 +11,9 @@ rojo1 = #e7344a
 	color gris2
 .rojo1
 	color rojo1
+img
+	width 100%
+	height auto
 .mayus
 	text-transform uppercase
 .bold
@@ -19,8 +22,10 @@ rojo1 = #e7344a
 	font-family 'Rajdhani', sans-serif
 .m-top-60
 	margin-top 60px
+.p-left-0
+	padding-left 0
 body
-	background white
+	background #f5f5f5
 	color gris1
 	font-family 'Roboto', sans-serif
 #masthead
@@ -188,6 +193,65 @@ h2.home-title
 	font-weight 100
 textarea
 	resize none
+/*NOSOTROS*/
+.inner-section-banner
+	height 450px
+	background-color gris1
+	display block
+	background-position -120px center
+	background-size cover
+	&.encuentranos
+	&.productos
+		background-position center center
+.video-container
+	position relative
+	width 100%
+	height 0
+	padding-bottom 56.25%
+.video
+	position absolute
+	top 0
+	left 0
+	width 100%
+	height 100%
+#map-showroom
+#map-warehouse
+	width 100%
+	height 250px
+	display block
+	background rgba(gris1, .5)
+.how-to-get-there
+	width 100%
+	background rojo1
+	color white
+	text-transform uppercase
+	text-align center
+	display block
+	padding 5px 0
+	letter-spacing 1px
+	transition color .5s ease
+	&:hover
+		color rgba(white, .7)
+		transition color .5s ease
+		text-decoration none
+.collection
+	.image
+		height 130px
+		display block
+		width 100%
+		background-size 320px
+		background-position center bottom
+		background-repeat no-repeat
+		&.natural
+			background-image url(./images/coleccion-piedra.jpg)
+		&.wood
+			background-image url(./images/coleccion-madera.jpg)
+		&.neolith
+			background-image url(./images/coleccion-neolith.jpg)
+	.view-collection
+		text-align right
+		a
+			text-decoration underline
 footer
 	border-top 3px solid rojo1
 	background gris1
@@ -243,6 +307,17 @@ footer
 	.featured-product
 		height 320px
 		transition height .5s ease
+	.collection
+		.image
+			height 200px
+			background-size 420px
+			transition all .5s ease
+@media screen and (min-width: 610px)
+	.collection
+		.image
+			height 270px
+			background-size 520px
+			transition all .5s ease
 @media screen and (min-width: 768px)
 	.navbar-toggler
 		display none
@@ -281,6 +356,15 @@ footer
 				justify-content flex-start
 				a
 					margin-right 10px
+	/*NOSOTROS*/
+	.inner-section-banner
+		height 770px
+		background-position -20px center
+	.collection
+		.image
+			height 240px
+			background-size 625px
+			transition all .5s ease
 	footer
 		.social-links
 			li
@@ -290,6 +374,14 @@ footer
 @media screen and (min-width: 992px)
 	textarea.form-control
 		height 120px
+	/*NOSOTROS*/
+	.inner-section-banner
+		background-position center center
+	.collection
+		.image
+			height 140px
+			background-size cover
+			transition all .5s ease
 	footer
 		.social-links
 			text-align left

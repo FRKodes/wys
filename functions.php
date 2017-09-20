@@ -1,4 +1,6 @@
 <?php
+add_theme_support( 'post-thumbnails' );
+
 function wys_enqueue_styles() {
 	wp_enqueue_style( 'style.css', get_template_directory_uri() . '/style.css', array(), '1.0.0' );
 	wp_enqueue_script( 'all.js', get_template_directory_uri() . '/all.js', array(), '1.0.0', true );
