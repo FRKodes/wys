@@ -54,3 +54,25 @@ function initMap() {
 
 
 }
+
+$(function() {
+    console.log( "ready!" );
+	$('.gallery-container').slick({
+		dots: true,
+		autoplay: true,
+		autoplaySpeed: 5000,
+		infinite: true,
+		speed: 300,
+		slidesToShow: 1,
+		adaptiveHeight: true
+	});
+
+	$('.icon-plus').on('click', function (){
+		$('.info-container').removeClass('more');
+		$('.plus').removeClass('less');
+		$(this).parent().addClass('less');
+		var current_post = $(this).attr('data-attibute');
+		$('.info-container.' + current_post).toggleClass('more');
+		console.log(current_post);
+	});
+});

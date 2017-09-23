@@ -16,15 +16,15 @@
 			<h2 class="col-xs-12 home-title rajdhani mayus bold p-left-0">Piedra natural</h2>
 			<div class="col-xs-12 image natural"></div>
 			<div class="view-collection">
-				<a href="#" class="rojo1">Ver colección</a>
+				<a href="/categoria-producto/piedras-naturales/" class="rojo1">Ver colección</a>
 			</div>
 		</div>
 
 		<div class="col-xs-12 col-md-4 collection">
-			<h2 class="col-xs-12 home-title rajdhani mayus bold p-left-0">Maderas de ingeniría</h2>
+			<h2 class="col-xs-12 home-title rajdhani mayus bold p-left-0">Maderas de ingeniería</h2>
 			<div class="col-xs-12 image wood"></div>
 			<div class="view-collection">
-				<a href="#" class="rojo1">Ver colección</a>
+				<a href="/categoria-producto/maderas-de-ingenieria/" class="rojo1">Ver colección</a>
 			</div>
 		</div>
 
@@ -32,7 +32,7 @@
 			<h2 class="col-xs-12 home-title rajdhani mayus bold p-left-0">Neolith</h2>
 			<div class="col-xs-12 image neolith"></div>
 			<div class="view-collection">
-				<a href="#" class="rojo1">Ver colección</a>
+				<a href="/categoria-producto/neolith/" class="rojo1">Ver colección</a>
 			</div>
 		</div>
 	</div>

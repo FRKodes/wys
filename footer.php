@@ -36,7 +36,7 @@
 								<li><a target="_blank" href="https://www.facebook.com/WoodAndStoneMX" class="icon-facebook"></a></li>
 								<li><a target="_blank" href="https://www.instagram.com/woodandstonemx" class="icon-instagram"></a></li>
 								<li><a target="_blank" href="https://www.pinterest.com/" class="icon-pinterest"></a></li>
-								<li><a target="_blank" href="https://www.youtube.com" class="icon-youtube"></a></li>
+								<li><a target="_blank" href="https://www.youtube.com/channel/UCQmWfhexSOSqwRiUxi6HEkw" class="icon-youtube"></a></li>
 							</ul>
 						</div>
 					</div>
