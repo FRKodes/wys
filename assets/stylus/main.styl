@@ -11,6 +11,8 @@ rojo1 = #e7344a
 	color gris2
 .rojo1
 	color rojo1
+.white
+	color white
 img
 	width 100%
 	height auto
@@ -142,7 +144,7 @@ h2.home-title
 				.description
 					height auto
 					opacity 1
-					transition all 1s ease
+					transition all .5s ease
 		.alpha-layer
 			background rgba(black, .6)
 			color white
@@ -155,7 +157,7 @@ h2.home-title
 				width 100%
 				overflow hidden
 				opacity 1
-				transition all 1s ease
+				transition all .2s ease
 	.plus
 		height 100%
 		width 65%
@@ -165,6 +167,11 @@ h2.home-title
 			width 25%
 		a
 			margin-left 10px
+			transform rotate(-90deg)
+			transition transform .5s ease
+			&.opened
+				transform rotate(45deg)
+				transition transform .5s ease
 		img
 			width 22px
 			height auto

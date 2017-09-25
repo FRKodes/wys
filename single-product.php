@@ -27,43 +27,46 @@ get_header(); ?>
 					<div class="col-xs-12 detail-texture-container">
 						<div class="detail-texture" style="background-image: url(<?php the_field('textura'); ?>)"></div>
 					</div>
-						<div class="col-xs-12 col-sm-10 col-sm-offset-1">
-							<?php the_content() ?>
-							<?php the_excerpt() ?>
-						</div>
 				</div>	
 			</div>
 
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12">
-						<h1 class="rajdhani detail-product-title">título producto</h1>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quas vero debitis nisi error enim, lorem ipsum dolor.</p>
+						<?php
+						while ( have_posts() ) : the_post(); ?>
+							<h1 class="rajdhani detail-product-title"><?php the_title(); ?></h1><?php
+							the_excerpt();
+						endwhile; // End of the loop.
+						?>
 					</div>
 				</div>
 
 				<div class="row">
 					<h2 class="col-xs-12 home-title rajdhani mayus bold">Piedra natural</h2>
 					<div class="col-xs-12 text-center origin">
-						<span class="icon-material"></span> <span class="text">Mármol</span>
-						<span class="icon-location"></span> <span class="text">Italia</span>
+						<span class="icon-material"></span> <span class="text"><?php the_field('material') ?></span>
+						<span class="icon-location"></span> <span class="text"><?php the_field('origen') ?></span>
 					</div>
 					<div class="col-xs-12 text-center used-in">
-						<span class="icon-bath"></span>
-						<span class="icon-sala"></span>
+						<?php $usos = get_field('usos') ?>
+						<?php foreach ($usos as $uso) { ?>
+							<span class="icon-<?php echo strtolower($uso); ?>"></span><?php
+						} ?>
+						
+						<!-- <span class="icon-sala"></span>
 						<span class="icon-exterior"></span>
-						<span class="icon-comedor"></span>
+						<span class="icon-comedor"></span> -->
 					</div>
 				</div>
 
 				<div class="row">
 					<h2 class="col-xs-12 home-title rajdhani mayus bold">Descripción</h2>
 					<div class="col-xs-12">
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti omnis commodi quidem eveniet officiis quod ipsa recusandae, enim nihil consectetur ab eum at voluptate repellendus, minima explicabo harum eos beatae!
-							<br><br>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quam excepturi ea temporibus facere nam necessitatibus hic accusamus optio, aperiam rerum laborum sit voluptas amet distinctio esse, voluptate fugit assumenda.
-						</p>
+						<?php
+						while ( have_posts() ) : the_post();
+							the_content();
+						endwhile; // End of the loop. ?>
 					</div>
 				</div>
 
@@ -84,14 +87,6 @@ get_header(); ?>
 			</div>
 
 			<div class="container">
-				<div class="row">
-					
-					<div class="col-xs-12">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, rem a magni eligendi qui dolorum at. Unde reprehenderit, nisi repellendus omnis quas rerum, debitis perferendis doloribus sunt, maiores dicta hic!</p>
-					</div>
-
-				</div>
-
 				<div class="row">
 					<h2 class="col-xs-12 home-title rajdhani mayus bold">Combina perfecto con:</h2>
 					<div class="col-xs-12 col-sm-6 featured-product" style="background: rgba(black, 0.7)">

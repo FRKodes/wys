@@ -61,7 +61,7 @@ $term = get_queried_object(); ?>
 											<p class="title"><?php the_title(); ?></p>
 											<div class="description">
 												<?php the_content(); ?>
-												<p><a href="<?php the_permalink(); ?>">Conoce más</a></p>
+												<p class="text-right"><a class="white bold" href="<?php the_permalink(); ?>">Conoce más</a></p>
 											</div>
 										</div>
 									</div>

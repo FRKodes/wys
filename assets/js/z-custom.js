@@ -70,7 +70,9 @@ $(function() {
 	$('.icon-plus').on('click', function (){
 		$('.info-container').removeClass('more');
 		$('.plus').removeClass('less');
+		$('.icon-plus').removeClass('opened');
 		$(this).parent().addClass('less');
+		$(this).toggleClass('opened');
 		var current_post = $(this).attr('data-attibute');
 		$('.info-container.' + current_post).toggleClass('more');
 		console.log(current_post);
