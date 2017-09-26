@@ -73,3 +73,49 @@ function create_product_taxonomy() {
 
   register_taxonomy( 'product_category', array( 'product' ), $args );
 }
+
+add_action( 'init', 'create_project_post_type' );
+function create_project_post_type() {
+  register_post_type( 'proyecto',
+    array(
+      'labels' => array(
+        'name' => __( 'Proyectos' ),
+        'singular_name' => __( 'Proyecto' ),
+        'add_new' => __( 'Agregar Proyecto' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'supports'=> array('title', 'editor', 'thumbnail', 'page-attributes', 'excerpt'),
+    )
+  );
+  flush_rewrite_rules();
+}
+add_action( 'init', 'create_project_taxonomy', 0 );
+
+function create_project_taxonomy() {
+  // Add new taxonomy, make it hierarchical (like categories)
+  $labels = array(
+    'name'              => _x( 'Categorías de proyecto', 'taxonomy general name', 'textdomain' ),
+    'singular_name'     => _x( 'Categoría de proyecto', 'taxonomy singular name', 'textdomain' ),
+    'search_items'      => __( 'Buscar Categorías de proyecto', 'textdomain' ),
+    'all_items'         => __( 'Todas las categorías de proyecto', 'textdomain' ),
+    'parent_item'       => __( 'Categoría padre', 'textdomain' ),
+    'parent_item_colon' => __( 'Categoría padre:', 'textdomain' ),
+    'edit_item'         => __( 'Editar Categoría de proyecto', 'textdomain' ),
+    'update_item'       => __( 'Actualizar Categoría de proyecto', 'textdomain' ),
+    'add_new_item'      => __( 'Agregar nueva Categoría de proyecto', 'textdomain' ),
+    'new_item_name'     => __( 'Nombre de la nueva categoría de proyecto', 'textdomain' ),
+    'menu_name'         => __( 'Categoría de proyecto', 'textdomain' ),
+  );
+
+  $args = array(
+    'hierarchical'      => true,
+    'labels'            => $labels,
+    'show_ui'           => true,
+    'show_admin_column' => true,
+    'query_var'         => true,
+    'rewrite'           => array( 'slug' => 'categoria' ),
+  );
+
+  register_taxonomy( 'project_category', array( 'proyecto' ), $args );
+}

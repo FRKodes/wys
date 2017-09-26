@@ -24,15 +24,11 @@ get_header(); ?>
 
 			<div class="container">
 				<div class="row">
-					<div class="col-xs-12 detail-texture-container">
+					<div class="col-xs-12 col-sm-4 col-sm-offset-1 col-md-3 detail-texture-container">
 						<div class="detail-texture" style="background-image: url(<?php the_field('textura'); ?>)"></div>
 					</div>
-				</div>	
-			</div>
 
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-12">
+					<div class="col-xs-12 col-sm-6 col-md-7">
 						<?php
 						while ( have_posts() ) : the_post(); ?>
 							<h1 class="rajdhani detail-product-title"><?php the_title(); ?></h1><?php
@@ -44,25 +40,21 @@ get_header(); ?>
 
 				<div class="row">
 					<h2 class="col-xs-12 home-title rajdhani mayus bold">Piedra natural</h2>
-					<div class="col-xs-12 text-center origin">
+					<div class="col-xs-12 col-md-10 col-md-offset-1 text-center origin">
 						<span class="icon-material"></span> <span class="text"><?php the_field('material') ?></span>
 						<span class="icon-location"></span> <span class="text"><?php the_field('origen') ?></span>
 					</div>
-					<div class="col-xs-12 text-center used-in">
+					<div class="col-xs-12 col-md-10 col-md-offset-1 text-center used-in">
 						<?php $usos = get_field('usos') ?>
 						<?php foreach ($usos as $uso) { ?>
 							<span class="icon-<?php echo strtolower($uso); ?>"></span><?php
 						} ?>
-						
-						<!-- <span class="icon-sala"></span>
-						<span class="icon-exterior"></span>
-						<span class="icon-comedor"></span> -->
 					</div>
 				</div>
 
 				<div class="row">
 					<h2 class="col-xs-12 home-title rajdhani mayus bold">Descripción</h2>
-					<div class="col-xs-12">
+					<div class="col-xs-12 col-md-10 col-md-offset-1">
 						<?php
 						while ( have_posts() ) : the_post();
 							the_content();

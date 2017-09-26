@@ -92,6 +92,20 @@ body
 			margin-top 15px
 		&:last-of-type
 			margin-bottom 15px
+ul.dropdown-menu
+	min-width 100%
+	background transparent
+	color white
+	top 0
+	border-radius 0
+	border none
+	position relative
+	box-shadow none
+	li
+		&:first-of-type
+			margin-top 0
+		&:last-of-type
+			margin-bottom 0
 .main-banner-container
 	height 460px
 	background rgba(gris1, .1)
@@ -104,6 +118,11 @@ h1
 	span
 		color rojo1
 		font-size .7em
+	&.project-page
+		margin-top 50px
+.tax-project_category
+	.page-header
+		margin-bottom 0
 h2.home-title
 	font-size 1.2em
 	&::before
@@ -265,6 +284,10 @@ textarea
 		a
 			text-decoration underline
 /*Detail*/
+.slick-arrow
+	background transparent
+	border none
+	color transparent
 .slick-prev
 	position relative
 	top 100px
@@ -273,7 +296,6 @@ textarea
 	position relative
 	float right
 	z-index 0
-	color transparent
 .slick-dots
 	margin 30px 0
 	padding 0
@@ -327,6 +349,23 @@ textarea
 			margin-left 10px
 	.text
 		font-size .5em
+/*taxonomy project page*/
+.project-item
+	position relative
+	.inner-project-image-container
+		height 220px
+		background-size cover
+		background-position center center
+		background-repeat no-repeat
+		display flex
+		justify-content center
+		align-items center
+	h2.home-title
+		position relative
+	.plus
+		width 30px
+		height 30px
+		
 footer
 	border-top 3px solid rojo1
 	background gris1
@@ -416,6 +455,24 @@ footer
 				margin-top 0
 			&:last-of-type
 				margin-bottom 0
+		&.open
+			ul.dropdown-menu
+				display flex
+				flex-direction column
+	ul.dropdown-menu
+		min-width 200px
+		background gris1
+		top initial
+		border-radius 0
+		border 1px soid white
+		position absolute
+		box-shadow none
+		bottom -55px
+		li
+			&:first-of-type
+				margin-top 0
+			&:last-of-type
+				margin-bottom 0
 	.main-banner-container
 		height 720px
 	h1
@@ -444,6 +501,13 @@ footer
 			height 240px
 			background-size 625px
 			transition all .5s ease
+	/*Product detail*/
+	.detail-texture
+		height 240px
+		width 240px
+	.detail-product-title
+		text-align left
+		margin-top 50px
 	footer
 		.social-links
 			li
@@ -453,6 +517,8 @@ footer
 @media screen and (min-width: 992px)
 	textarea.form-control
 		height 120px
+	.inner-section-banner
+		height 550px
 	/*NOSOTROS*/
 	.inner-section-banner
 		background-position center center
@@ -461,6 +527,10 @@ footer
 			height 140px
 			background-size cover
 			transition all .5s ease
+	/*Product detail*/
+	.detail-texture
+		height 220px
+		width 220px
 	footer
 		.social-links
 			text-align left

@@ -72,6 +72,9 @@ function initMap() {
 
 $(function() {
     console.log( "ready!" );
+    $('ul.sub-menu').removeClass('sub-menu').addClass('dropdown-menu');
+	$('.menu-item-has-children a').attr('data-toggle', 'dropdown');
+
 	$('.gallery-container').slick({
 		dots: true,
 		autoplay: true,

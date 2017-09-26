@@ -60,7 +60,7 @@ $term = get_queried_object(); ?>
 										<div class="alpha-layer">
 											<p class="title"><?php the_title(); ?></p>
 											<div class="description">
-												<?php the_content(); ?>
+												<?php the_excerpt(); ?>
 												<p class="text-right"><a class="white bold" href="<?php the_permalink(); ?>">Conoce más</a></p>
 											</div>
 										</div>
