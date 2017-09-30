@@ -18,19 +18,15 @@ get_header(); ?>
 		<div class="main-banner-container">
 			<?php $query_main_banners = new WP_Query( array('post_type' => 'banner_home', 'posts_per_page' => 5, 'orderby'=> 'order_menu','order'=>'ASC') );
 			while ( $query_main_banners->have_posts() ) : $query_main_banners->the_post();?>
-				<div class="image main" style="background-image: url(<?php the_post_thumbnail_url() ?>)">
-					<a href="<?php the_field('link'); ?>">
-						<span class="text-container">
-							<h1><?php the_title(); ?></h1>
-							<?php the_content(); ?>
-						</span>
-					</a>
+				<div class="item main" style="background-image: url(<?php the_post_thumbnail_url() ?>)">
+					<h2 class="button-text"><a href="<?php the_field('link'); ?>" title=" Ver <?php the_title(); ?>"><?php the_title(); ?></a></h2>
+					<figure><img src="<?php the_field('imagen_bottom'); ?>" alt="<?php the_title(); ?>"></figure>
 				</div><?php 
 			wp_reset_postdata();
 			endwhile;?>
 		</div>
 		
-		<div class="container">
+		<div class="container m-top-80">
 			<div class="row">
 				<h1 class="col-xs-12 rajdhani">
 					Toda la fuerza <br>de la naturaleza<br>
@@ -42,42 +38,34 @@ get_header(); ?>
 		<div class="container">
 			<div class="row">
 				<h2 class="col-xs-12 home-title rajdhani mayus bold">Productos</h2>
-				<div class="col-xs-12 col-sm-6 featured-product one">
-					<div class="info-container">
-						<div class="alpha-layer">
-							<p class="title">Oak Essex</p>
-							<p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus quo quibusdam.</p>
-						</div>
-					</div>
-					<div class="plus"><a href="#show" class="icon-plus"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/more.svg" alt="Ver más de este producto"></a></div>
-				</div>
-				<div class="col-xs-12 col-sm-6 featured-product even two">
-					<div class="info-container">
-						<div class="alpha-layer">
-							<p class="title">Iron Moss</p>
-							<p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-						</div>
-					</div>
-					<div class="plus"><a href="#show" class="icon-plus"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/more.svg" alt="Ver más de este producto"></a></div>
-				</div>
-				<div class="col-xs-12 col-sm-6 featured-product three">
-					<div class="info-container">
-						<div class="alpha-layer">
-							<p class="title">Nero Zimbawe</p>
-							<p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate saepe consequuntur.</p>
-						</div>
-					</div>
-					<div class="plus"><a href="#show" class="icon-plus"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/more.svg" alt="Ver más de este producto"></a></div>
-				</div>
-				<div class="col-xs-12 col-sm-6 featured-product even four">
-					<div class="info-container">
-						<div class="alpha-layer">
-							<p class="title">Strata Argentum</p>
-							<p class="description">Lorem ipsum dolor sit amet, consectetur.</p>
-						</div>
-					</div>
-					<div class="plus"><a href="#show" class="icon-plus"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/more.svg" alt="Ver más de este producto"></a></div>
-				</div>
+
+
+				<?php 
+				$args = array(
+				    'post_type' => 'product',
+				    'posts_per_page' => 4,
+				    'product_category' => $term->slug
+				);
+				$query = new WP_Query( $args );
+				$counter = 0;
+				if ($query->have_posts()) {
+					while ( $query->have_posts() ) : $query->the_post();
+						$counter ++; ?>
+						<div class="col-xs-12 col-sm-6 featured-product<?php if($counter%2 == 0) echo ' even'; ?>" style="background-image: url(<?php the_post_thumbnail_url(); ?>)">
+							<div class="info-container<?php echo " " . $post->post_name; ?>" style="background-image: url(<?php the_field('textura'); ?>)">
+								<div class="alpha-layer">
+									<p class="title"><?php the_title(); ?></p>
+									<div class="description">
+										<?php the_excerpt(); ?>
+										<p class="text-right"><a class="white bold" href="<?php the_permalink(); ?>">Conoce más</a></p>
+									</div>
+								</div>
+							</div>
+							<div class="plus"><a href="#show" data-attibute="<?php echo $post->post_name; ?>" class="icon-plus"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/more.svg" alt="Ver más de este producto"></a></div>
+						</div><?php 
+					endwhile;
+				}
+				wp_reset_postdata(); ?>
 			</div>
 		</div>
 

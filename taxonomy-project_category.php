@@ -32,7 +32,7 @@ $term = get_queried_object(); ?>
 
 			<div class="container">
 				<div class="row">
-					<p class="col-xs-12"><?php echo $term->description; ?></p>
+					<p class="col-xs-12 col-sm-10 col-sm-offset-1"><?php echo $term->description; ?></p>
 				</div>
 			</div>
 			<?php
@@ -52,10 +52,10 @@ $term = get_queried_object(); ?>
 								<div class="col-xs-12 col-sm-6 project-item">
 									<div class="info-container<?php echo " " . $post->post_name; ?>">
 										<h2 class="home-title rajdhani mayus bold"><a class="gris1" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-										<div class="description"><?php the_excerpt(); ?></div>
+										<div class="description col-md-10 col-md-offset-1"><?php the_excerpt(); ?></div>
 									</div>
-									<div class="inner-project-image-container" style="background-image: url(<?php the_post_thumbnail_url(); ?>)">
-										<div class="plus"><a href="#show" data-attibute="<?php echo $post->post_name; ?>" class="icon-plus"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/more.svg" alt="Ver más de este producto"></a></div>
+									<div class="col-xs-12 inner-project-image-container" style="background-image: url(<?php the_post_thumbnail_url(); ?>)">
+										<div class="plus"><a href="<?php the_permalink(); ?>" data-attibute="<?php echo $post->post_name; ?>" class="icon-plus"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/more.svg" alt="Ver más de este producto"></a></div>
 									</div>
 								</div>
 					        <?php endwhile;

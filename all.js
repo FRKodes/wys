@@ -85,6 +85,26 @@ $(function() {
 		adaptiveHeight: true
 	});
 
+	$('.materials-gallery-container').slick({
+		dots: true,
+		autoplay: true,
+		autoplaySpeed: 5000,
+		infinite: true,
+		speed: 300,
+		slidesToShow: 1,
+		adaptiveHeight: true
+	});
+
+	$('.main-banner-container').slick({
+		dots: true,
+		autoplay: true,
+		autoplaySpeed: 5000,
+		infinite: true,
+		speed: 300,
+		slidesToShow: 1,
+		adaptiveHeight: true
+	});
+
 	$('.icon-plus').on('click', function (){
 		$('.info-container').removeClass('more');
 		$('.plus').removeClass('less');

@@ -24,6 +24,8 @@ img
 	font-family 'Rajdhani', sans-serif
 .m-top-60
 	margin-top 60px
+.m-top-80
+	margin-top 80px
 .p-left-0
 	padding-left 0
 .hidden
@@ -110,6 +112,31 @@ ul.dropdown-menu
 	height 460px
 	background rgba(gris1, .1)
 	display block
+	.item
+		background-position center center
+		background-repeat no-repeat
+		background-size cover
+		display inline-block
+		height 460px
+		position relative
+		width 100%
+		text-align center
+		h2.button-text
+			border 1px solid white
+			font-size .9em
+			display inline-block
+			margin-top 100px
+			width 200px
+			padding 10px 20px
+			text-transform uppercase
+			a
+				color white
+		figure
+			width 210px
+			position absolute
+			bottom -10px
+			left 50%
+			margin-left -105px
 h1
 	text-transform uppercase
 	font-weight bold
@@ -326,6 +353,11 @@ textarea
 	margin-top -75px
 .detail-product-title
 	text-align center
+.detail-project-title
+	text-align left
+h2.subtitle
+	font-size 1.4em
+	margin-top -10px
 .origin
 .used-in
 	background gris1
@@ -365,7 +397,76 @@ textarea
 	.plus
 		width 30px
 		height 30px
-		
+/*Project detail*/
+.item-material-gallery
+	.main-image-container
+		height 210px
+		display block
+		background-size cover
+		background-position center center
+		background-repeat no-repeat
+	.product-texture
+		text-align center
+		margin-top -50px
+		.inner-texture
+			width 100px
+			height 100px
+			display inline-block
+			border 1px solid gris1
+			a
+				width 100%
+				height 100%
+				display block
+	.product-title
+		text-align center
+		font-size 1.6em
+		margin-top 20px
+	.product-excerpt
+		height 62px
+		overflow hidden
+.blog-page-container
+	padding-top 50px
+.main-post-container
+	margin-bottom 40px
+.post-item
+	margin-bottom 20px
+	position relative
+	h2.home-title
+		position relative
+	&.featured
+		.image-container
+			height 320px
+		h2.home-title
+			font-size 2em
+.image-container
+	height 220px
+	background-repeat no-repeat
+	background-size cover
+	background-position center center
+.published-on
+	font-weight bold
+	font-size .8em
+	margin-top 10px
+.tags
+	a
+		border 1px solid gris1
+		color gris2
+		padding 2px 3px
+		font-size .9em
+.post-content
+	div
+	img
+		width 100% !important
+		height auto
+		display block
+.share-btn-container
+	text-align right
+	margin-bottom 20px
+	a
+		background rojo1
+		color white
+		padding 3px 5px
+		font-size .9em
 footer
 	border-top 3px solid rojo1
 	background gris1
@@ -475,6 +576,17 @@ footer
 				margin-bottom 0
 	.main-banner-container
 		height 720px
+		.item
+			height 720px
+			h2.button-text
+				font-size 1.1em
+				margin-top 160px
+				width 250px
+			figure
+				width 400px
+				bottom -10px
+				left 50%
+				margin-left -200px
 	h1
 		font-size 3.2em
 		line-height 0.8em
@@ -508,6 +620,47 @@ footer
 	.detail-product-title
 		text-align left
 		margin-top 50px
+	.project-item
+		.description
+			height 62px
+			overflow hidden
+			margin-bottom 10px
+	/*taxonomy project page*/
+	.project-item
+		.inner-project-image-container
+			height 330px
+		.plus
+			width 70px
+			height 70px
+	/*Project detail*/
+	.item-material-gallery
+		.main-image-container
+			height 520px
+		.product-texture
+			text-align center
+			.inner-texture
+				width 150px
+				height 150px
+		.product-title
+			text-align left
+			font-size 1.8em
+	/*Blog stuff*/
+	.post-item
+		margin-bottom 40px
+		&.featured
+			.image-container
+				height 520px
+			h2.home-title
+				font-size 2.6em
+	.published-on
+		font-weight bold
+		font-size .8em
+	.tags
+		a
+			border 1px solid gris1
+			color gris2
+			padding 2px 3px
+			font-size .9em
 	footer
 		.social-links
 			li
@@ -531,6 +684,19 @@ footer
 	.detail-texture
 		height 220px
 		width 220px
+	/*taxonomy project page*/
+	.project-item
+		.inner-project-image-container
+			height 440px
+	/*Project detail*/
+	.item-material-gallery
+		.product-texture
+			text-align center
+			.inner-texture
+				width 220px
+				height 220px
+		.product-title
+			font-size 2em
 	footer
 		.social-links
 			text-align left
@@ -551,3 +717,12 @@ footer
 					margin-bottom 10px
 		.disclaimer
 			text-align right
+@media screen and (min-width: 1200px)
+	/*Project detail*/
+	.item-material-gallery
+		.product-texture
+			.inner-texture
+				width 270px
+				height 270px
+		.product-title
+			font-size 2em
