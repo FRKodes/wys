@@ -58,7 +58,8 @@ get_header(); ?>
 						<?php
 						while ( have_posts() ) : the_post();
 							the_content();
-						endwhile; // End of the loop. ?>
+						endwhile; // End of the loop.
+						wp_reset_postdata();?>
 					</div>
 				</div>
 
@@ -79,27 +80,31 @@ get_header(); ?>
 			</div>
 
 			<div class="container">
+
 				<div class="row">
-					<h2 class="col-xs-12 home-title rajdhani mayus bold">Combina perfecto con:</h2>
-					<div class="col-xs-12 col-sm-6 featured-product" style="background: rgba(black, 0.7)">
-						<div class="info-container">
-							<div class="alpha-layer">
-								<p class="title">Oak Essex</p>
-								<p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus quo quibusdam.</p>
+					<h2 class="col-xs-12 home-title rajdhani mayus bold">Combina perfecto con:</h2><?php
+					$productos = get_field('combina_con');
+					$size = "large";
+
+					if( $productos ): ?>
+						<?php foreach( $productos as $producto ):
+							$slug = get_post_field( 'post_name', $producto ); ?>
+							<div class="col-xs-12 col-sm-6 featured-product" style="background-image: url(<?php echo get_the_post_thumbnail_url($producto,'full');?>)">
+								<div class="info-container <?php echo $slug; ?>" style="background-image: url(<?php the_field('textura', $producto);?>)">
+									<div class="alpha-layer">
+										<p class="title"><?php echo get_the_title($producto); ?></p>
+										<div class="description">
+											<p><?php the_excerpt($producto); ?></p>
+											<p class="text-right"><a class="white bold" href="<?php the_permalink($producto); ?>">Conoce más</a></p>
+										</div>
+									</div>
+								</div>
+								<div class="plus"><a href="#show" class="icon-plus" data-attibute="<?php echo $slug; ?> "><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/more.svg" alt="Ver más de este producto"></a></div>
 							</div>
-						</div>
-						<div class="plus"><a href="#show" class="icon-plus"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/more.svg" alt="Ver más de este producto"></a></div>
-					</div>
-					<div class="col-xs-12 col-sm-6 featured-product one">
-						<div class="info-container">
-							<div class="alpha-layer">
-								<p class="title">Oak Essex</p>
-								<p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus quo quibusdam.</p>
-							</div>
-						</div>
-						<div class="plus"><a href="#show" class="icon-plus"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/more.svg" alt="Ver más de este producto"></a></div>
-					</div>
+						<?php endforeach; ?>
+					<?php endif; ?>
 				</div>
+
 			</div>
 
 		</main><!-- #main -->
