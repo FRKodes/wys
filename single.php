@@ -28,7 +28,7 @@ get_header(); ?>
 						<h1 class="col-xs-12 rajdhani detail-post-title"><?php the_title(); ?></h1>
 						<div class="col-xs-12 col-sm-10 col-sm-offset-1">
 							<div class="published-on"><?php the_date(); ?></div>
-							<div class="share-btn-container"><a class="share-btn" href="#">Compartir</a></div>
+							<div class="share-btn-container"><a class="share-btn" href="https://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>">Compartir</a></div>
 							<div class="post-content"><?php the_content(); ?></div>
 						</div><?php
 					endwhile;?>

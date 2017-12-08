@@ -43,21 +43,26 @@
 					
 					<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-1">
 						<p class="footer-title">Contáctanos</p>
-						<form action="POST" class="footer-contact-form">
-							<div class="form-group"><input type="text" name="nombre" placeholder="Nombre" class="form-control"></div>
-							<div class="form-group"><input type="text" name="email" placeholder="Email" class="form-control"></div>
+						<form method="POST" action="/sendmail" class="footer-contact-form" id="contactForm">
+							<div class="form-group"><input type="text" name="nombre" placeholder="*Nombre" class="form-control" data-validate="required"></div>
+							<div class="form-group"><input type="text" name="email" placeholder="*Email" class="form-control" data-validate="required|email"></div>
 							<div class="form-group"><input type="text" name="telefono" placeholder="Teléfono" class="form-control"></div>
 							<div class="form-group">
-								<textarea class="form-control" name="comentario" id="comentario" placeholder="Comentario" cols="30" rows="10"></textarea>
+								<textarea class="form-control" name="comentario" id="comentario" placeholder="*Comentario" cols="30" rows="10" data-validate="required"></textarea>
 							</div>
 							<div class="form-group">
 								<button class="btn btn-primary">Enviar</button>
+								<p class="text-danger">Los campos con * son obligatorios</p>
+							</div>
+							<div class="sent_mail_alert text-center white">
+								<b>¡GRACIAS!</b><br><br>
+								Tu mensaje ha sido enviado con éxito, enbreve nos pondremos en contacto contigo.
 							</div>
 						</form>
 					</div>
 
 					<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-3 col-md-offset-0 footer-aux-menu">
-						<div class="footer-menu-block"><?php wp_nav_menu( array('theme_location' => 'footer', 'menu_class' => 'footer-menu') ); ?></div>
+						<div class="footer-menu-block"><?php wp_nav_menu( array('theme_location' => 'footer_menu', 'menu_class' => 'footer-menu') ); ?></div>
 					</div>
 				</div>
 
