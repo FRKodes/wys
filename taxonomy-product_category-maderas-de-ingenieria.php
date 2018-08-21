@@ -26,7 +26,9 @@ $term = get_queried_object(); ?>
 		<div class="row">
 			<div class="col-xs-12">
 				<h1 class="page-title rajdhani"><?php echo $term->description; ?></h1>
-				<p class="description"><?php echo "--- " . the_field('texto_de_apoyo'); ?></p>
+				<p class="description">
+					Maderas de ingeniería, lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus laudantium, ab minima dolor earum facilis maxime quasi, corporis dolorum in, accusantium quidem doloremque voluptatibus aut, aspernatur ex quia delectus mollitia.
+				</p>
 			</div>
 		</div>
 	</header>

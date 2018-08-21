@@ -26,7 +26,7 @@ $term = get_queried_object(); ?>
 		<div class="row">
 			<div class="col-xs-12">
 				<h1 class="page-title rajdhani"><?php echo $term->description; ?></h1>
-				<p class="description"><?php echo "--- " . the_field('texto_de_apoyo'); ?></p>
+				<p class="description">Nuestro fuerte, piedra natural. Tenemos más de 120 materiales de línea que van desde los más básicos hasta los Premium.</p>
 			</div>
 		</div>
 	</header>

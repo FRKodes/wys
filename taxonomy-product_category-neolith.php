@@ -26,7 +26,7 @@ $term = get_queried_object(); ?>
 		<div class="row">
 			<div class="col-xs-12">
 				<h1 class="page-title rajdhani"><?php echo $term->description; ?></h1>
-				<p class="description"><?php echo "--- " . the_field('texto_de_apoyo'); ?></p>
+				<p class="description">El recubrimiento por excelencia del momento por su resistencia, durabilidad y versatilidad.</p>
 			</div>
 		</div>
 	</header>
